@@ -1,0 +1,543 @@
+TASK1
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 ~
+$ cd /tmp
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp
+$ mkdir homework
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp
+$ cd homework
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework
+$ git init
+Initialized empty Git repository in C:/Users/liubo/AppData/Local/Temp/homework/.git/
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ touch file1.txt
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git add file1.txt
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git commit -m "added file1.txt"
+[master (root-commit) 0f017a5] added file1.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1.txt
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git checkout -b "architecture"
+Switched to a new branch 'architecture'
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (architecture)
+$ mkdir assets/ uploads/
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (architecture)
+$ touch index.html
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (architecture)
+$ git add .
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (architecture)
+$ git commit -m "create 2 folders and 1 html file"
+[architecture 531748f] create 2 folders and 1 html file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (architecture)
+$ touch assets/all.js assets/css.js
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (architecture)
+$ git add .
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (architecture)
+$ git commit -m "added two js-files"
+[architecture 589e94d] added two js-files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 assets/all.js
+ create mode 100644 assets/css.js
+
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (architecture)
+$ git remote add origin https://github.com/LiubomyrZaiats/vcs-homework.git
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (architecture)
+$ git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 223 bytes | 223.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/LiubomyrZaiats/vcs-homework.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (architecture)
+$ touch .gitignore uploads/.ign
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (architecture)
+$ start .gitignore
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (architecture)
+$ git add .
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (architecture)
+$ git commit -m "create gitignore"
+[architecture 862e944] create gitignore
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 uploads/.ign
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (architecture)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git merge architecture
+Updating 0f017a5..862e944
+Fast-forward
+ .gitignore    | 0
+ assets/all.js | 0
+ assets/css.js | 0
+ index.html    | 0
+ uploads/.ign  | 0
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 assets/all.js
+ create mode 100644 assets/css.js
+ create mode 100644 index.html
+ create mode 100644 uploads/.ign
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git branch -d architecture
+Deleted branch architecture (was 862e944).
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git push
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 850 bytes | 850.00 KiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/LiubomyrZaiats/vcs-homework.git
+   0f017a5..862e944  master -> master
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$
+
+--------------------------------------------------------------------
+
+TASK2
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git checkout -b "new1"
+Switched to a new branch 'new1'
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (new1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ touch file2.txt
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ touch file3.txt
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git add .
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git commit -m "added 2 file"
+[master ef3c13b] added 2 file
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file2.txt
+ create mode 100644 file3.txt
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ touch main.css
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git add main.css
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git commit -m "added main.css"
+[master 3de45a8] added main.css
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 main.css
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git checkout new1
+Switched to branch 'new1'
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (new1)
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Fast-forwarded new1 to master.
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (new1)
+$ git status
+On branch new1
+nothing to commit, working tree clean
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (new1)
+$ touch example1
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (new1)
+$ git add .
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (new1)
+$ git commit  -m "added example1"
+[new1 3a99418] added example1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 example1
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (new1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git merge new1
+Updating 3de45a8..3a99418
+Fast-forward
+ example1 | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 example1
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git branch -d new1
+Deleted branch new1 (was 3a99418).
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$
+
+----------------------------------------------------------
+
+TASK3
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ touch text.txt
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git add text.txt
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git commit -m "added text.txt"
+[master 403e0a0] added text.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 text.txt
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ touch about.html
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git add about.html
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git commit -m "added about.html"
+[master b00d42f] added about.html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 about.html
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git tag -a v3.9 -m "my version 3.9"
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git tag
+v3.9
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git show v3.9
+tag v3.9
+Tagger: LiubomyrZaiats <liubomyr.zaiats1@gmail.com>
+Date:   Tue Nov 21 13:12:58 2017 +0200
+
+my version 3.9
+
+commit b00d42fcf64950c8e57e2a19198eca9bafb6a49c (HEAD -> master, tag: v3.9)
+Author: LiubomyrZaiats <liubomyr.zaiats1@gmail.com>
+Date:   Tue Nov 21 13:12:32 2017 +0200
+
+    added about.html
+
+diff --git a/about.html b/about.html
+new file mode 100644
+index 0000000..e69de29
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git push
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1.09 KiB | 557.00 KiB/s, done.
+Total 10 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), done.
+To https://github.com/LiubomyrZaiats/vcs-homework.git
+   862e944..b00d42f  master -> master
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$
+
+------------------------------------------------------
+
+TASK4
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git submodule add https://github.com/LiubomyrZaiats/vcs-homework.git
+Cloning into 'C:/Users/liubo/AppData/Local/Temp/homework/vcs-homework'...
+remote: Counting objects: 21, done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 21 (delta 6), reused 20 (delta 5), pack-reused 0
+Unpacking objects: 100% (21/21), done.
+warning: LF will be replaced by CRLF in .gitmodules.
+The file will have its original line endings in your working directory.
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitmodules
+        new file:   vcs-homework
+
+
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git commit -m "added submodule"
+[master 536be5e] added submodule
+ 2 files changed, 4 insertions(+)
+ create mode 100644 .gitmodules
+ create mode 160000 vcs-homework
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 404 bytes | 404.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/LiubomyrZaiats/vcs-homework.git
+   b00d42f..536be5e  master -> master
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$
+
+-------------------------------------------------------
+
+TASK5
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (master)
+$ git checkout -b gh-pages
+Switched to a new branch 'gh-pages'
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (gh-pages)
+$ touch index.html
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (gh-pages)
+$ start index.html
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (gh-pages)
+$ git status
+On branch gh-pages
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (gh-pages)
+$ git add .
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (gh-pages)
+$ git commit -m "added index.html"
+[gh-pages 1b2f02c] added index.html
+ 1 file changed, 1 insertion(+)
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (gh-pages)
+$ git push origin gh-pages
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 282 bytes | 282.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/LiubomyrZaiats/vcs-homework.git
+ * [new branch]      gh-pages -> gh-pages
+
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (gh-pages)
+$ git config --global core.editor "'c:/program files/sublime text 3/sub1.exe' -w"
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (gh-pages)
+$ start index.html
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (gh-pages)
+$ git status
+On branch gh-pages
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (gh-pages)
+$ git add .
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (gh-pages)
+$ git commit -m "changed index.html"
+[gh-pages 07158aa] changed index.html
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/homework (gh-pages)
+$ git push origin gh-pages
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 299 bytes | 299.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/LiubomyrZaiats/vcs-homework.git
+   1b2f02c..07158aa  gh-pages -> gh-pages
+
+https://liubomyrzaiats.github.io/vcs-homework/
+
+---------------------------------------------------------------
+
+TASK6
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6
+$ git init
+Initialized empty Git repository in C:/Users/liubo/AppData/Local/Temp/task6/.git/
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master)
+$ touch file.txt
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master)
+$ git add .
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master)
+$ git commit -m "added empty file"
+[master (root-commit) 9aadabf] added empty file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file.txt
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master)
+$ git checkout -b branch
+Switched to a new branch 'branch'
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (branch)
+$ git checkout master
+Switched to branch 'master'
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master)
+$ start file.txt
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master)
+$ git add .
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master)
+$ git commit -m "change file.txt"
+[master 8305c2c] change file.txt
+ 1 file changed, 1 insertion(+)
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master)
+$ git checkout branch
+Switched to branch 'branch'
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (branch)
+$ start file.txt
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (branch)
+$ git status
+On branch branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (branch)
+$ git add .
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (branch)
+$ git commit -m "change file.txt"
+[branch 0c41308] change file.txt
+ 1 file changed, 1 insertion(+)
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (branch)
+$ git checkout master
+Switched to branch 'master'
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master)
+$ git merge branch
+Auto-merging file.txt
+CONFLICT (content): Merge conflict in file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master|MERGING)
+$ git merge --abort
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master)
+$ start file.txt
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master)
+$ git add .
+
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master)
+$ git commit -m "fixed conflict"
+[master 11fc1d9] fixed conflict
+ 1 file changed, 1 deletion(-)
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master)
+$ git merge branch
+Merge made by the 'recursive' strategy.
+ file.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Liubomyr@DESKTOP-B98HSK0 MINGW64 /tmp/task6 (master)
+$
+
+
+
+
